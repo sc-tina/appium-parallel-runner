@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  appium-server:
+    image: appium/appium:latest
+    privileged: true
+    ports:
+      - "4723:4723"
+    environment:
+      ANDROID_HOME: /opt/android-sdk
+    volumes:
+      - /dev/bus/usb:/dev/bus/usb
+      - ~/.android:/root/.android
+    network_mode: host
