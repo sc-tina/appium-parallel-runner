@@ -1,0 +1,13 @@
+devices:
+  - name: "Pixel 6 Pro - Device 1"
+    udid: "emulator-5554"
+    port: 4723
+    no_reset: true
+
+appium_server:
+  host: "0.0.0.0"
+  port_range: [4723, 4733]
+
+parallelism:
+  max_workers: 4
+  test_timeout_seconds: 300
